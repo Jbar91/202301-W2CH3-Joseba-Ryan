@@ -64,8 +64,6 @@ export const aEvery = (arr, item) => {
   return true;
 };
 
-console.log(aEvery([1, 1, 3, 1], 1));
-
 export const findIndex = (num, b, c, index) => {
   for (num of b) {
     c++;
