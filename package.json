@@ -1,0 +1,19 @@
+{
+  "name": "challenge3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jbar91/202301-W2CH3-Joseba-Ibarlucea.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jbar91/202301-W2CH3-Joseba-Ibarlucea/issues"
+  },
+  "homepage": "https://github.com/Jbar91/202301-W2CH3-Joseba-Ibarlucea#readme"
+}
