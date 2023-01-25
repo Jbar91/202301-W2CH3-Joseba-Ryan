@@ -6,9 +6,11 @@ import {
   aShift,
   aSome,
   aEvery,
+  findIndex,
   aFind,
   aMap,
 } from './methods';
+
 // Function aLength
 describe('Given an array of length 4', () => {
   test('Should be length of 4', () => {
@@ -126,6 +128,19 @@ describe('Given an array [1,1,1,3]', () => {
   });
 });
 
+// Function findIndex
+describe('Given findIndex function', () => {
+  describe('When the inset the number they are looking for', () => {
+    test('When insert 3 it should show 3', () => {
+      const num = 3;
+      const b = [1, 2, 3, 4];
+      const c = 0;
+      const index = 2;
+      const expected = 2;
+      const r = findIndex(num, b, c, index);
+      expect(r).toBe(expected);
+    });
+
 // Function find
 describe('Given an array of [1,2,3,4]', () => {
   test('Then if we look for 2, the result should be found', () => {
@@ -145,7 +160,7 @@ describe('Given an array of [1,2,3,4]', () => {
 });
 
 // Function map
-describe.only('Given an array of [1,2,3]', () => {
+describe('Given an array of [1,2,3]', () => {
   test('Then the result should be [2,4,6]', () => {
     const a = [1, 2, 3];
     const b = 2;
@@ -157,7 +172,7 @@ describe.only('Given an array of [1,2,3]', () => {
 
 // Function filter
 
-describe.only("Given an array ['a','b',2]", () => {
+describe("Given an array ['a','b',2]", () => {
   test('Then if "b" is in the array should be found', () => {
     const a = ['a', 'b', 2];
     const b = 'b';
