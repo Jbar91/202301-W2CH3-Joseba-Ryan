@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/Jbar91/202301-W2CH3-Joseba-Ibarlucea.git"
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
