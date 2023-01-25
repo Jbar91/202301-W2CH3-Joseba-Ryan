@@ -6,6 +6,7 @@ import {
   aShift,
   aSome,
   aEvery,
+  findIndex,
 } from './methods';
 // Function aLength
 describe('Given an array of length 4', () => {
@@ -107,7 +108,7 @@ describe('Given an array ["pepe","foo","bar"]', () => {
 });
 
 // Function every
-describe.only('Given an array [1,1,1,1]', () => {
+describe('Given an array [1,1,1,1]', () => {
   test('Then result is true if item is every element in array', () => {
     const a = [1, 1, 1, 1];
     const b = 1;
@@ -115,11 +116,25 @@ describe.only('Given an array [1,1,1,1]', () => {
     expect(aEvery(a, b)).toBe(result);
   });
 });
-describe.only('Given an array [1,1,1,3]', () => {
+describe('Given an array [1,1,1,3]', () => {
   test('Then result is false if item is every element in array', () => {
     const a = [1, 1, 1, 3];
     const b = 1;
     const result = false;
     expect(aEvery(a, b)).toBe(result);
+  });
+});
+
+describe('Given findIndex function', () => {
+  describe('When the inset the number they are looking for', () => {
+    test('When insert 3 it should show 3', () => {
+      const a = 3;
+      const b = [1, 2, 3, 4];
+      const c = 0;
+      const index = 2;
+      const expected = 2;
+      const r = findIndex(a, b, c, index);
+      expect(r).toBe(expected);
+    });
   });
 });
