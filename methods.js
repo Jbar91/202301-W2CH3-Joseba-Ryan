@@ -74,3 +74,57 @@ export const findIndex = (num, b, c, index) => {
     }
   }
 };
+
+export const aFind = (arr, itemFind) => {
+  if (aLength(arr) === 0) {
+    return undefined;
+  }
+
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === itemFind) {
+      return arr[i];
+    }
+  }
+
+  return false;
+};
+
+export const aMap = (arr, number, symbol) => {
+  const _length = aLength(arr);
+
+  for (let i = 0; i < _length; i++) {
+    switch (symbol) {
+      case '*':
+        arr[i] *= number;
+        break;
+      case '+':
+        arr[i] += number;
+        break;
+      case '-':
+        arr[i] -= number;
+        break;
+      case '/':
+        arr[i] /= number;
+        break;
+      default:
+        break;
+    }
+  }
+
+  return arr;
+};
+
+export const aFilter = (arr, itemFilter) => {
+  if (aLength(arr) === 0) {
+    return undefined;
+  }
+
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === itemFilter) {
+      return [arr[i]];
+    }
+  }
+
+  return [];
+};
+

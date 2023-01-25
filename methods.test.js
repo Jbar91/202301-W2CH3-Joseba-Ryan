@@ -7,7 +7,10 @@ import {
   aSome,
   aEvery,
   findIndex,
+  aFind,
+  aMap,
 } from './methods';
+
 // Function aLength
 describe('Given an array of length 4', () => {
   test('Should be length of 4', () => {
@@ -125,6 +128,7 @@ describe('Given an array [1,1,1,3]', () => {
   });
 });
 
+// Function findIndex
 describe('Given findIndex function', () => {
   describe('When the inset the number they are looking for', () => {
     test('When insert 3 it should show 3', () => {
@@ -136,5 +140,43 @@ describe('Given findIndex function', () => {
       const r = findIndex(num, b, c, index);
       expect(r).toBe(expected);
     });
+
+// Function find
+describe('Given an array of [1,2,3,4]', () => {
+  test('Then if we look for 2, the result should be found', () => {
+    const a = [1, 2, 3, 4];
+    const b = 2;
+    const result = 2;
+    expect(aFind(a, b)).toBe(result);
+  });
+});
+describe('Given an array of [1,2,3,4]', () => {
+  test('Then if we look for 5, the result should be found', () => {
+    const a = [1, 2, 3, 4];
+    const b = 5;
+    const result = false;
+    expect(aFind(a, b)).toBe(result);
+  });
+});
+
+// Function map
+describe('Given an array of [1,2,3]', () => {
+  test('Then the result should be [2,4,6]', () => {
+    const a = [1, 2, 3];
+    const b = 2;
+    const symbol = '*';
+    const result = [2, 4, 6];
+    expect(aMap(a, b, symbol)).toEqual(result);
+  });
+});
+
+// Function filter
+
+describe("Given an array ['a','b',2]", () => {
+  test('Then if "b" is in the array should be found', () => {
+    const a = ['a', 'b', 2];
+    const b = 'b';
+    const result = 'b';
+    expect(aFind(a, b)).toEqual(result);
   });
 });
