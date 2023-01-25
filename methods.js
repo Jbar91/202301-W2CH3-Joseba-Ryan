@@ -64,4 +64,57 @@ export const aEvery = (arr, item) => {
   return true;
 };
 
-console.log(aEvery([1, 1, 3, 1], 1));
+export const aFind = (arr, itemFind) => {
+  if (aLength(arr) === 0) {
+    return undefined;
+  }
+
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === itemFind) {
+      return arr[i];
+    }
+  }
+
+  return false;
+};
+
+export const aMap = (arr, number, symbol) => {
+  const _length = aLength(arr);
+
+  for (let i = 0; i < _length; i++) {
+    switch (symbol) {
+      case '*':
+        arr[i] *= number;
+        break;
+      case '+':
+        arr[i] += number;
+        break;
+      case '-':
+        arr[i] -= number;
+        break;
+      case '/':
+        arr[i] /= number;
+        break;
+      default:
+        break;
+    }
+  }
+
+  return arr;
+};
+
+export const aFilter = (arr, itemFilter) => {
+  if (aLength(arr) === 0) {
+    return undefined;
+  }
+
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === itemFilter) {
+      return [arr[i]];
+    }
+  }
+
+  return [];
+};
+
+console.log(aFilter([1, 2, 3], 3));
