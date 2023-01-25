@@ -8,14 +8,16 @@ import {
   aEvery,
   aFind,
   aFilter,
+  findIndex,
 } from './methods.js';
 
 console.log(aLength([1, 2, 3]));
 console.log(aPush([1, 2], 3));
 console.log(aPop([1, 2]));
 console.log(aUnshift([2, 3, 4], 1));
-console.log(aShift(1, 2, 3, 4));
+console.log(aShift([1, 2, 3, 4]));
 console.log(aSome([1, 2, 3, 4], 2));
 console.log(aEvery([1, 1, 1, 1], 1));
 console.log(aFind([1, 1, 1], 2));
 console.log(aFilter([1, 2, 3], 4));
+console.log(findIndex([1, 2, 3, 4], 6));

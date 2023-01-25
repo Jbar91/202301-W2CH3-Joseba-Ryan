@@ -64,15 +64,17 @@ export const aEvery = (arr, item) => {
   return true;
 };
 
-export const findIndex = (num, b, c, index) => {
-  for (num of b) {
-    c++;
-    if (c === index) {
-      index = c;
-
-      return c;
+export const findIndex = (arr, b) => {
+  let index = 0;
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === b) {
+      return index;
     }
+
+    index++;
   }
+
+  return -1;
 };
 
 export const aFind = (arr, itemFind) => {
@@ -127,4 +129,3 @@ export const aFilter = (arr, itemFilter) => {
 
   return [];
 };
-
