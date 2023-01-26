@@ -108,6 +108,8 @@ export const aMap = (arr, number, symbol) => {
 };
 
 export const aFilter = (arr, itemFilter) => {
+  const value = '[]';
+
   if (aLength(arr) === 0) {
     return undefined;
   }
@@ -118,7 +120,7 @@ export const aFilter = (arr, itemFilter) => {
     }
   }
 
-  return '[]';
+  return value;
 };
 
 export const findIndex = (arr, b) => {
