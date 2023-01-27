@@ -1,12 +1,16 @@
 export const aLength = (arr) => {
-  let i = 0;
-  for (const n in arr) {
-    if (arr || n === undefined) {
-      i++;
+  let n = 0;
+  if (typeof arr === 'string') {
+    return arr.length;
+  }
+
+  for (n in arr) {
+    if (arr) {
+      n++;
     }
   }
 
-  return i;
+  return n;
 };
 
 export const aPush = (arr, item) => {
@@ -64,19 +68,6 @@ export const aEvery = (arr, item) => {
   return true;
 };
 
-export const findIndex = (arr, b) => {
-  let index = 0;
-  for (let i = 0; i < aLength(arr); i++) {
-    if (arr[i] === b) {
-      return index;
-    }
-
-    index++;
-  }
-
-  return -1;
-};
-
 export const aFind = (arr, itemFind) => {
   if (aLength(arr) === 0) {
     return undefined;
@@ -109,7 +100,7 @@ export const aMap = (arr, number, symbol) => {
         arr[i] /= number;
         break;
       default:
-        break;
+        return undefined;
     }
   }
 
@@ -117,6 +108,8 @@ export const aMap = (arr, number, symbol) => {
 };
 
 export const aFilter = (arr, itemFilter) => {
+  const value = '[]';
+
   if (aLength(arr) === 0) {
     return undefined;
   }
@@ -127,5 +120,40 @@ export const aFilter = (arr, itemFilter) => {
     }
   }
 
-  return [];
+  return value;
 };
+
+export const findIndex = (arr, b) => {
+  let index = 0;
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === b) {
+      return index;
+    }
+
+    index++;
+  }
+
+  return -1;
+};
+
+export const aIncludes = (arr, itemIncluded) => {
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === itemIncluded) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+export const aIndexOf = (arr, item) => {
+  for (let i = 0; i < aLength(arr); i++) {
+    if (arr[i] === item) {
+      return i;
+    }
+  }
+
+  return -1;
+};
+
+console.log(aIncludes([1, 2, 3], 4));
